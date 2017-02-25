@@ -153,8 +153,8 @@ namespace SFBBot_UCWA.UcwaSfbo
 
                                                     Activity activity = new Activity()
                                                     {
-                                                        From = new ChannelAccount { Id = conversationId, Name = conversationId },
-                                                        Conversation = new ConversationAccount { Id = fromId },
+                                                        From = new ChannelAccount { Id = fromId, Name = fromId },
+                                                        Conversation = new ConversationAccount { Id = conversationId },
                                                         Recipient = new ChannelAccount { Id = "Bot" },
                                                         ServiceUrl = "https://skype.botframework.com",
                                                         ChannelId = "skype",
