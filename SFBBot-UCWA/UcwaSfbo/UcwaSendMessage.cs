@@ -57,7 +57,7 @@ namespace SFBBot_UCWA.UcwaSfbo
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ConfigData.ucwaAuthenticationResult.AccessToken);
                 httpClient.DefaultRequestHeaders.Add("Accept", "application/vnd.microsoft.com.ucwa+xml");
 
-                string url_00 = ConfigData.ucwaApplications + ConfigData.ucwaApplication + ConfigData.ucwaMessagingInvitations;
+                string url_00 = ConfigData.ucwaApplicationsHost + ConfigData.ucwaApplication + ConfigData.ucwaMessagingInvitations;
 
                 ConfigData.Log("1", String.Format("Step 01 : POST : {0}", url_00));
                 string guiId_sessionContext = Guid.NewGuid().ToString();
@@ -115,7 +115,7 @@ namespace SFBBot_UCWA.UcwaSfbo
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ConfigData.ucwaAuthenticationResult.AccessToken);
                 httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
 
-                string url_00 = ConfigData.ucwaApplications + ConfigData.ucwaEvents;// .Replace('#', '2');
+                string url_00 = ConfigData.ucwaApplicationsHost + ConfigData.ucwaEvents;// .Replace('#', '2');
                 ConfigData.Log("1", String.Format("Step 02 : GET : {0}", url_00));
 
                 ConfigData.Log("3", String.Format(">> Request: {0}", "GET"));
@@ -178,9 +178,9 @@ namespace SFBBot_UCWA.UcwaSfbo
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ConfigData.ucwaAuthenticationResult.AccessToken);
                 httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
 
-                string url_00 = ConfigData.ucwaApplications + ConfigData.ucwaEvents;//.Replace('#', '3');
+                string url_00 = ConfigData.ucwaApplicationsHost + ConfigData.ucwaEvents;//.Replace('#', '3');
                 if (retry)
-                    url_00 = ConfigData.ucwaApplications + ConfigData.ucwaEvents.Replace('#', '1');
+                    url_00 = ConfigData.ucwaApplicationsHost + ConfigData.ucwaEvents.Replace('#', '1');
 
                 ConfigData.Log("1", String.Format("Step 03 : GET : {0}", url_00));
 
@@ -240,7 +240,7 @@ namespace SFBBot_UCWA.UcwaSfbo
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ConfigData.ucwaAuthenticationResult.AccessToken);
                 httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
 
-                string url_00 = ConfigData.ucwaApplications + ConfigData.ucwaConversation;
+                string url_00 = ConfigData.ucwaApplicationsHost + ConfigData.ucwaConversation;
 
                 ConfigData.Log("1", String.Format("Step 04 : GET : {0}", url_00));
 
@@ -300,14 +300,14 @@ namespace SFBBot_UCWA.UcwaSfbo
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ConfigData.ucwaAuthenticationResult.AccessToken);
                 httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
 
-                string url_00 = ConfigData.ucwaApplications + ConfigData.ucwaMessaging + "/messages?OperationContext=" + Guid.NewGuid().ToString();
+                string url_00 = ConfigData.ucwaApplicationsHost + ConfigData.ucwaMessaging + "/messages?OperationContext=" + Guid.NewGuid().ToString();
 
                 if (url != "")
                 {
-                    url_00 = ConfigData.ucwaApplications + url + "/messages?OperationContext=" + Guid.NewGuid().ToString();
+                    url_00 = ConfigData.ucwaApplicationsHost + url + "/messages?OperationContext=" + Guid.NewGuid().ToString();
                 }
                 else
-                    url_00 = ConfigData.ucwaApplications + ConfigData.ucwaMessaging + "/messages?OperationContext=" + Guid.NewGuid().ToString();
+                    url_00 = ConfigData.ucwaApplicationsHost + ConfigData.ucwaMessaging + "/messages?OperationContext=" + Guid.NewGuid().ToString();
 
                 ConfigData.Log("1", String.Format("Step 05 : POST : {0}", url_00));
 
@@ -358,7 +358,7 @@ namespace SFBBot_UCWA.UcwaSfbo
 
                 // string url_00 = ConfigData.ucwaApplications +ConfigData.ucwaMessaging + ConfigData.ucwaStopMessaging;
 
-                string url_00 = ConfigData.ucwaApplications + ConfigData.ucwaApplication + ConfigData.ucwaFilter;
+                string url_00 = ConfigData.ucwaApplicationsHost + ConfigData.ucwaApplication + ConfigData.ucwaFilter;
 
                 ConfigData.Log("1", String.Format("Step 01 : POST : {0}", url_00));
 
@@ -439,7 +439,7 @@ namespace SFBBot_UCWA.UcwaSfbo
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ConfigData.ucwaAuthenticationResult.AccessToken);
                 httpClient.DefaultRequestHeaders.Add("Accept", "application/vnd.microsoft.com.ucwa+xml");
 
-                string url_00 = ConfigData.ucwaApplications + ConfigData.ucwaEvents;
+                string url_00 = ConfigData.ucwaApplicationsHost + ConfigData.ucwaEvents;
                 ConfigData.Log("1", String.Format("Step 06 : GET : {0}", url_00));
 
                 ConfigData.Log("3", String.Format(">> Request: {0}", "GET"));
@@ -492,7 +492,7 @@ namespace SFBBot_UCWA.UcwaSfbo
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ConfigData.ucwaAuthenticationResult.AccessToken);
                 httpClient.DefaultRequestHeaders.Add("Accept", "application/vnd.microsoft.com.ucwa+xml");
 
-                string url_00 = ConfigData.ucwaApplications + ConfigData.ucwaMessaging + ConfigData.ucwaStopMessaging;
+                string url_00 = ConfigData.ucwaApplicationsHost + ConfigData.ucwaMessaging + ConfigData.ucwaStopMessaging;
                 ConfigData.Log("1", String.Format("Step 07 : POST : {0}", url_00));
 
                 string postdata_07 = "";

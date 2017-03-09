@@ -256,6 +256,7 @@ namespace SFBBot_UCWA
             Console.WriteLine("We prefix this to the links returned from the UCWA apps POST");
             Console.WriteLine("Since these links aren't full URIs");
             ucwaApplicationsHost = Utilities.ReduceUriToProtoAndHost(ucwaApplicationsUri);
+            ConfigData.ucwaApplicationsHost = ucwaApplicationsHost;
             Console.WriteLine("ucwaApplicationsHost is " + ucwaApplicationsHost);
 
             Console.WriteLine("Get a token to access the user's UCWA Applications Resources from Azure AD.");

@@ -37,7 +37,7 @@ namespace SFBBot_UCWA.UcwaSfbo
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ConfigData.ucwaAuthenticationResult.AccessToken);
                 httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
 
-                string url_00 = ConfigData.ucwaApplications + ConfigData.ucwaApplication;// + ConfigData.ucwaPeopleContact;
+                string url_00 = ConfigData.ucwaApplicationsHost + ConfigData.ucwaApplication;// + ConfigData.ucwaPeopleContact;
 
                 ConfigData.Log("1", String.Format("Step 01 : POST : {0}", url_00));
 
@@ -88,7 +88,7 @@ namespace SFBBot_UCWA.UcwaSfbo
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ConfigData.ucwaAuthenticationResult.AccessToken);
                 httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
 
-                string url_00 = ConfigData.ucwaApplications + ConfigData.ucwaEvents;
+                string url_00 = ConfigData.ucwaApplicationsHost + ConfigData.ucwaEvents;
 
                 ConfigData.Log("1", String.Format("Step 03 : GET : {0}", url_00));
 
@@ -269,7 +269,7 @@ namespace SFBBot_UCWA.UcwaSfbo
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ConfigData.ucwaAuthenticationResult.AccessToken);
                 httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
 
-                string url_00 = ConfigData.ucwaApplications + acceptUrl;
+                string url_00 = ConfigData.ucwaApplicationsHost + acceptUrl;
 
                 ConfigData.Log("1", String.Format("Step 04 : GET : {0}", url_00));
 
@@ -308,7 +308,7 @@ namespace SFBBot_UCWA.UcwaSfbo
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ConfigData.ucwaAuthenticationResult.AccessToken);
                 httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
 
-                string url_00 = ConfigData.ucwaApplications + ConfigData.ucwaEvents;
+                string url_00 = ConfigData.ucwaApplicationsHost + ConfigData.ucwaEvents;
 
                 ConfigData.Log("1", String.Format("Step 05 : GET : {0}", url_00));
 
@@ -366,7 +366,7 @@ namespace SFBBot_UCWA.UcwaSfbo
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ConfigData.ucwaAuthenticationResult.AccessToken);
                 httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
 
-                string url_00 = ConfigData.ucwaApplications + ConfigData.ucwaApplication + ConfigData.ucwaPeopleContact;
+                string url_00 = ConfigData.ucwaApplicationsHost + ConfigData.ucwaApplication + ConfigData.ucwaPeopleContact;
                 //string url_00 = ConfigData.ucwaApplications + ConfigData.ucwaEvents;;
                 ConfigData.Log("1", String.Format("Step 02 : GET : {0}", url_00));
 
@@ -420,7 +420,7 @@ namespace SFBBot_UCWA.UcwaSfbo
                 httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
                 //httpClient.DefaultRequestHeaders.Add("Accept", "application/vnd.microsoft.com.ucwa+xml");
 
-                string url_00 = ConfigData.ucwaApplications + ConfigData.ucwaEvents;
+                string url_00 = ConfigData.ucwaApplicationsHost + ConfigData.ucwaEvents;
                 ConfigData.Log("1", String.Format("Step 06 : GET : {0}", url_00));
 
                 ConfigData.Log("3", String.Format(">> Request: {0}", "GET"));
@@ -469,7 +469,7 @@ namespace SFBBot_UCWA.UcwaSfbo
                 httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
                 //httpClient.DefaultRequestHeaders.Add("Accept", "application/vnd.microsoft.com.ucwa+xml");
 
-                string url_00 = ConfigData.ucwaApplications + ConfigData.ucwaEvents;
+                string url_00 = ConfigData.ucwaApplicationsHost + ConfigData.ucwaEvents;
                 ConfigData.Log("1", String.Format("Step 07 : GET : {0}", url_00));
 
                 ConfigData.Log("3", String.Format(">> Request: {0}", "GET"));
@@ -517,7 +517,7 @@ namespace SFBBot_UCWA.UcwaSfbo
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", ConfigData.ucwaAuthenticationResult.AccessToken);
                 httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
 
-                string url_00 = ConfigData.ucwaApplications + ConfigData.ucwaApplication + ConfigData.ucwaFilter;
+                string url_00 = ConfigData.ucwaApplicationsHost + ConfigData.ucwaApplication + ConfigData.ucwaFilter;
 
                 ConfigData.Log("1", String.Format("Step 01 : POST : {0}", url_00));
 
