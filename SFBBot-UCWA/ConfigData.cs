@@ -20,7 +20,7 @@ namespace SFBBot_UCWA
         public static string ucwaConversation { get; set; }
         public static string ucwaStopMessaging ="/terminate";
 
-        public static string ucwaApplications = "https://webpoolpnqin102.infra.lync.com";
+        public static string ucwaApplicationsHost { get; set; }
         public static string ucwaMessaging = "";
         internal static string ucwaFilter= "communication/conversations?filter=active";
 
